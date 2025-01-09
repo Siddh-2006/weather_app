@@ -11,188 +11,117 @@
     font-family: 'Poppins',sans-serif;
 }
 
-
-/* body{
-    background-image:url("background.png");
-    background-size:cover;
+body{
+    height:100vh;
+}
+.container{
     display:flex;
-    justify-content: center;
+    align-items:center;
 }
-.welcome{
-    position: fixed;
-    top:5rem;
-    bottom:2rem;
-    left:3rem;
-    background:#161c2b;
-    color:white;
-    height:80vh;
-    width:45vw;
-    border-radius:2rem;
-    box-shadow:0 0 0.8rem #161c2b;
-    background-image: url(background.png);
-    background-size:cover;
+.weather-input{
+    width:40%;
+    position:fixed;
+    inset:0;
+    background-color:#78c1f3;
+    padding:1rem 2.5rem;
 }
-
-.form-container{
-    position: fixed;
-    top:5rem;
-    bottom:2rem;
-    right:3rem;
-    background:#161c2b;
-    color:white;
-    height:80vh;
-    width:45vw;
-    border-radius:2rem;
-    box-shadow:0 0 0.8rem #161c2b;
-    background-image: url(background.png);
-    background-size:cover;
+.input-group{
+    position:relative;
+    display:flex;
+    align-items:center;
+    margin:2rem 0;
 }
-input{
-    font-size:1.6rem;
-    width:80%;
+.input-group input{
+    background:#f8f8f8;
+    text-transform:capitalize;
+    padding:1rem;
+    font-size:15px;
+    border-radius:2.3rem;
+    width:100%;
+}
+.input-group .converter{
     position:absolute;
-    margin:3rem;
-    top:5rem;
-    border-radius: 2rem;
-    height:2rem;
+    right: 45px;
+    font-size:20px;
+    cursor:pointer;
+    color:#909090;
+}
+.input-group .fa-search{
+    position:absolute;
+    right:15px;
+    color:#909090;
+    cursor:pointer;
+    font-size:22px;
+}
+.weather-output{
+    width:60%;
+    position:fixed;
+    inset:0;
+    margin-left:40%;
     padding:2rem;
-    border:0.1rem solid  white; ;
-    box-shadow:0 0 2rem white;
+    background:#f6f6f6;
+    overflow:auto;
 }
-.button{
-    position:absolute;
-    margin:3rem;
-    bottom:5rem;
-    padding:1rem;
-    border-radius:2rem;
-    
-    width:80%;
-    font-size:1.2rem;
-    box-shadow:inset 0 0 2rem white;
-}
-.button-one{
-    position:absolute;
-    margin:3rem;
-    bottom:12rem;
-    padding:1rem;
-    border-radius:2rem;
-   
-    width:80%;
-    font-size:1rem;
-    box-shadow: 0 0 2rem white;
-}
-input:hover{
-    border:none;
-    
-    box-shadow:0 0 0.8rem 0.1rem  #161c2b;
-}
-.button-one:hover{
-    border:none;
-    
-    box-shadow:0 0 0.8rem 0.1rem  #161c2b;
-}
-.button:hover{
-    border:none;
-    
-    box-shadow:0 0 0.8rem 0.1rem  #161c2b;
-} */
 
-/* From Uiverse.io by vinodjangid07 */ 
- .cardContainer {
-    width: fit-content;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .card {
-    position: relative;
-    width: 220px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 10px;
-    border-radius: 10px;
-    backdrop-filter: blur(30px);
-    background-color: rgba(65, 65, 65, 0.308);
-    border: 1px solid rgba(255, 255, 255, 0.089);
-    cursor: pointer;
-  }
-  
-  .city {
-    font-weight: 700;
-    font-size: 0.9em;
-    letter-spacing: 1.2px;
-    color: white;
-  }
-  
-  .weather {
-    font-weight: 500;
-    font-size: 0.7em;
-    letter-spacing: 1.2px;
-    color: rgb(197, 197, 197);
-  }
-  
-  .temp {
-    font-size: 1.8em;
-    color: white;
-  }
-  
-  .minmaxContainer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .min,
-  .max {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0px 20px;
-    gap: 4px;
-  }
-  
-  .max {
-    align-items: flex-start;
-    border-left: 2px solid white;
-  }
-  
-  .maxHeading,
-  .minHeading {
-    font-size: 0.7em;
-    font-weight: 600;
-    color: white;
-  }
-  
-  .maxTemp,
-  .minTemp {
-    font-size: 0.6em;
-    font-weight: 500;
-    color: rgb(197, 197, 197);
-  }
-  
-  .cardContainer::before {
-    width: 100px;
-    height: 100px;
-    content: "";
-    position: absolute;
-    background-color: rgb(144, 161, 255);
-    z-index: -1;
-    border-radius: 50%;
-    left: 100px;
-    top: 50px;
-    transition: all 1s;
-  }
-  
-  .cardContainer:hover::before {
-    transform: translate(-50px, 50px);
-  } 
-  
+.weather-input .feelsLike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city{
+    padding:10px 0;
+}
 
+.temperature{
+    font-size:5rem;
+    text-align:center;
+    display:flex;
+    font-weight:300;
+
+}
+.highlight{
+    display:grid;
+    grid-template-columns:repeat(5,135px);
+    grid-auto-flow: row;
+    column-gap:10px;
+    row-gap:1rem;
+}
+
+.weatherIcon{
+    font-size:4rem;
+}
+
+.highlight div,
+.Forecast div{
+    height:200px;
+    display:grid;
+    align-items:center;
+    justify-content: center;
+    text-align:center;
+    background:#78c1f3;
+    padding:0.8rem 1.5rem;
+    border-radius:20px;
+    transition:0.2s ease;
+}
+
+.highlight div:hover,
+.Forecast div:hover{
+    
+    transform:scale(1.02);
+    box-shadow: 0 0 0.3rem #173950;
+}
+
+.highlight i{
+    font-size:45px;
+}
+
+.Forecast{
+    display:grid;
+    grid-template-columns: repeat(7,94px);
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+.sun span{
+    align-items:center;
+    display:flex;
+    gap:10px;
+}
