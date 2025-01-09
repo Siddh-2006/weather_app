@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+/* body{
+    background-image:url("background.png");
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+}
+.welcome{
+    position: fixed;
+    top:5rem;
+    bottom:2rem;
+    left:3rem;
+    background:#161c2b;
+    color:white;
+    height:80vh;
+    width:45vw;
+    border-radius:2rem;
+    box-shadow:0 0 0.8rem #161c2b;
+    background-image: url(background.png);
+    background-size:cover;
+}
+
+.form-container{
+    position: fixed;
+    top:5rem;
+    bottom:2rem;
+    right:3rem;
+    background:#161c2b;
+    color:white;
+    height:80vh;
+    width:45vw;
+    border-radius:2rem;
+    box-shadow:0 0 0.8rem #161c2b;
+    background-image: url(background.png);
+    background-size:cover;
+}
+input{
+    font-size:1.6rem;
+    width:80%;
+    position:absolute;
+    margin:3rem;
+    top:5rem;
+    border-radius: 2rem;
+    height:2rem;
+    padding:2rem;
+    border:0.1rem solid  white; ;
+    box-shadow:0 0 2rem white;
+}
+.button{
+    position:absolute;
+    margin:3rem;
+    bottom:5rem;
+    padding:1rem;
+    border-radius:2rem;
+    
+    width:80%;
+    font-size:1.2rem;
+    box-shadow:inset 0 0 2rem white;
+}
+.button-one{
+    position:absolute;
+    margin:3rem;
+    bottom:12rem;
+    padding:1rem;
+    border-radius:2rem;
+   
+    width:80%;
+    font-size:1rem;
+    box-shadow: 0 0 2rem white;
+}
+input:hover{
+    border:none;
+    
+    box-shadow:0 0 0.8rem 0.1rem  #161c2b;
+}
+.button-one:hover{
+    border:none;
+    
+    box-shadow:0 0 0.8rem 0.1rem  #161c2b;
+}
+.button:hover{
+    border:none;
+    
+    box-shadow:0 0 0.8rem 0.1rem  #161c2b;
+} */
+
+/* From Uiverse.io by vinodjangid07 */ 
+ .cardContainer {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(65, 65, 65, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+    cursor: pointer;
+  }
+  
+  .city {
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 1.2px;
+    color: white;
+  }
+  
+  .weather {
+    font-weight: 500;
+    font-size: 0.7em;
+    letter-spacing: 1.2px;
+    color: rgb(197, 197, 197);
+  }
+  
+  .temp {
+    font-size: 1.8em;
+    color: white;
+  }
+  
+  .minmaxContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .min,
+  .max {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0px 20px;
+    gap: 4px;
+  }
+  
+  .max {
+    align-items: flex-start;
+    border-left: 2px solid white;
+  }
+  
+  .maxHeading,
+  .minHeading {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .maxTemp,
+  .minTemp {
+    font-size: 0.6em;
+    font-weight: 500;
+    color: rgb(197, 197, 197);
+  }
+  
+  .cardContainer::before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    background-color: rgb(144, 161, 255);
+    z-index: -1;
+    border-radius: 50%;
+    left: 100px;
+    top: 50px;
+    transition: all 1s;
+  }
+  
+  .cardContainer:hover::before {
+    transform: translate(-50px, 50px);
+  } 
+  
+
