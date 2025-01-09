@@ -19,5 +19,5 @@ from django.urls import path,include
 from weather_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",views.home)
+    path("",include("waether_app.urls"))
 ]
