@@ -14,6 +14,9 @@
 body{
     height:100vh;
 }
+h1{
+    font-size: 1.5em;
+}
 .container{
     display:flex;
     align-items:center;
@@ -79,7 +82,7 @@ body{
 }
 .highlight{
     display:grid;
-    grid-template-columns:repeat(5,135px);
+    grid-template-columns:repeat(5,10vw);
     grid-auto-flow: row;
     column-gap:10px;
     row-gap:1rem;
@@ -112,10 +115,9 @@ body{
 .highlight i{
     font-size:45px;
 }
-
 .Forecast{
     display:grid;
-    grid-template-columns: repeat(7,94px);
+    grid-template-columns: repeat(7,7vw);
     grid-auto-flow: row;
     row-gap: 1rem;
     column-gap: 10px;
@@ -125,7 +127,9 @@ body{
     display:flex;
     gap:10px;
 }
-
+#MValue{
+    font-size: 1.2em;
+}
 
 /* Dialog styles */
 .loading-dialog {
@@ -177,6 +181,89 @@ body{
 p {
     margin: 0;
     font-size: 16px;
+}
+
+
+/* media quaries */
+@media screen and (max-width:700px){
+    .container{
+        flex-flow:column nowrap;
+    }
+    .weather-input{
+        position:static;
+        margin:auto;
+        width:100%;
+    }
+    .weather-output{
+        position: static;
+        margin:auto;
+        width:100%;
+        padding: 20px 5px 20px 5px;
+    }
+    .current_data{
+        display:flex;
+        flex-flow:column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .highlight,.Forecast{
+        display:flex;
+        flex-flow:row nowrap;
+        padding: 0;
+        width:100%;
+        overflow-x: auto;
+
+    }
+    .highlight div{
+        flex-basis: 50vw;
+        flex-shrink: 0;
+    }
+    .Forecast div{
+        min-width: 40vw;
+    }
+    .Forecast i{
+        font-size: 2em;
+    }
+    .date_holder{
+        font-weight: 600;
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    h1{
+        font-size: 1.4em;
+    }
+}
+@media screen and (max-width:1400px) and (min-width:701px){
+    .highlight i{
+        font-size: 1.5em;
+    }
+    .highlight,.Forecast{
+        display:flex;
+        flex-flow:row nowrap;
+        padding: 0;
+        width:100%;
+        overflow-x: auto;
+        gap:10px;
+
+    }
+    .highlight div{
+        flex-basis: min(20vw,150px);
+        flex-shrink: 0;
+    }
+    .Forecast div{
+        min-width: min(20vw,150px);
+    }
+    .Forecast i{
+        font-size: 2em;
+    }
+    .date_holder{
+        font-weight: 600;
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    h1{
+        font-size: 1.4em;
+    }
 }
 
 /* From Uiverse.io by zanina-yassine */ 
