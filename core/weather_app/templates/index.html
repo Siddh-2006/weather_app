@@ -13,8 +13,18 @@
 <body>
     <div id="loading-dialog" class="loading-dialog">
         <div class="loading-content">
-            <div class="loader"></div>
-            <p>Fetching the latest weather data...</p>
+            <div class="container">
+            <div class="cloud front">
+                <span class="left-front"></span>
+                <span class="right-front"></span>
+            </div>
+            <span class="sun sunshine"></span>
+            <span class="sun"></span>
+            <div class="cloud back">
+                <span class="left-back"></span>
+                <span class="right-back"></span>
+            </div>
+            </div>
         </div>
     </div>          
    
@@ -103,34 +113,16 @@
                 <i class="fa-solid fa-bookmark"></i>
                 <h1 id="AQIValue"></h1>
             </div>
-
-            
             <div class="precipitation">
                 Precipitation
                 <i class="fa-solid fa-droplet"></i>
                 <h1 id="AQIValue"></h1>
             </div>
-
-
-
-
-
-            
-
-
-
             <div class="uv-index">
                 UV Index
                 <i class="fa-solid fa-bacon"></i>
                 <h1 id="UVValue"></h1>
             </div>
-
-         
-
-           
-    
-
-        
             <div class="pressure">
                 Pressure
                 <i class="fa-solid fa-volcano"></i>
@@ -216,7 +208,16 @@
                 <h1 id="PValue"></h1>
             </div>
         </div>
-        
+        <div class="map"> </div>
+        <div class="footer_copyrigth">
+            <p><i class="fa-solid fa-copyright"></i> 2025 Team_name.All rigths reserved</p>
+            <p>CREDIT:</p>
+            <p>backend:Bhaskar Sau</p>
+            <p>frontend:Freny Chauhan</p>
+            <p>Leader: Shah Siddh</p>
+            APi's:
+            <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+        </div>
     </div>
     </div>
     <script src=" {% static 'script.js'%}" ></script>
