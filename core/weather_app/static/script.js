@@ -37,6 +37,7 @@ function update(res){
 }
 /* function to fetch data */
 function send_name(event){
+    showLoading();
     $.ajax({
         type: "post",
         headers:{'X-CSRFToken': csrftoken},
@@ -45,17 +46,28 @@ function send_name(event){
         dataType: "json",
         success: function (response) {
             update(response);
-            fetch_forecast(response.location.name,7);
         },
         error: function(response) {
             console.log("error",response);
             window.alert(response.responseJSON.error);
         }
     });
+    
+    setTimeout(hideLoading,2000);
 };
-function fetch_forecast(loc,days){
 
+/* function to show loading */
+function showLoading() {
+    console.log("called");
+    document.getElementById('loading-dialog').classList.add('active');
 }
+
+/* function to hide loading */
+function hideLoading() {
+    document.getElementById('loading-dialog').classList.remove('active');
+}
+
+/* event listeners */
 $(userLocation).keyup(function (e) { 
     if(e.keyCode==13){
         $(search_btn).click();
