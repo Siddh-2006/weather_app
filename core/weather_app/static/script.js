@@ -17,8 +17,8 @@ const Forecast =document.querySelector(".Forecast");
 const search_btn=document.querySelector("#search_city_btn");
 const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
 
-/* function to update ui */
-function update(res){
+/* function to update current data to ui */
+function update_current(res){
     if(res.current.cloud==1){
         CValue.textContent=`cloudy`;
     }
@@ -33,8 +33,15 @@ function update(res){
     city.textContent=`${res.location.name},${res.location.region},${res.location.country}`;
     date.textContent=`${res.location.localtime}`;
     wdvalue.textContent=`${res.current.wind_mph}`;
-   
+    SRValue.textContent=`${res.forecast.forecastday[0].astro.sunrise}`;
+    SSValue.textContent=`${res.forecast.forecastday[0].astro.sunset}`;
+   $("#MValue").text(`${res.forecast.forecastday[0].astro.moon_phase}`);
+   $("#PrecVal").text(`${res.forecast.forecastday[0].day.totalprecip_in}`);
+   UVValue.textContent=`${res.forecast.forecastday[0].day.uv}`;
+   $("#AQIValue").text(`${res.forecast.forecastday[0].day.air_quality["us-epa-index"]}`);
+   forecast(res.forecast);
 }
+
 /* function to fetch data */
 function send_name(event){
     showLoading();
@@ -45,7 +52,7 @@ function send_name(event){
         data: {"location":userLocation.value},
         dataType: "json",
         success: function (response) {
-            update(response);
+            update_current(response);
         },
         error: function(response) {
             console.log("error",response);
@@ -53,8 +60,20 @@ function send_name(event){
         }
     });
     
-    setTimeout(hideLoading,2000);
+    setTimeout(hideLoading,200);
 };
+/* function to update seven day forecast */
+function forecast(fr){
+    const fr_node_list=document.querySelectorAll(".Forecast h1");
+    const fr_node_date=document.querySelectorAll(".Forecast .fore_date .date_holder");
+    for(let i=0;i<14;i++){
+        let temp=fr.forecastday[i].day.avgtemp_c;
+        fr_node_list[i].textContent=`${temp}`;
+        fr_node_date[i].innerText=`${fr.forecastday[i].date}`;
+    }
+    
+}
+
 
 /* function to show loading */
 function showLoading() {

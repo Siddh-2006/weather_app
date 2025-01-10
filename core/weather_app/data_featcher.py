@@ -7,7 +7,7 @@ payload={"key":api_key}
 base_url="http://api.weatherapi.com/v1"
 def fetch_current(loc,**kwargs):
     url=base_url+"/forecast.json"
-    payload.update({"q":loc,"days":1,"day_fields":"temp_c","hour_fields":"temp_c","hour":"12"})
+    payload.update({"q":loc,"days":15,"day_fields":"temp_c","hour_fields":"temp_c","hour":"12","aqi":"yes"})
     payload.update(**kwargs)
     data=re.get(url,params=payload)
     print(data.url)

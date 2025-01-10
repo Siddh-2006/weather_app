@@ -15,7 +15,7 @@ body{
     height:100vh;
 }
 .container{
-    display:flex;
+    display:falex;
     align-items:center;
 }
 .weather-input{
@@ -112,7 +112,6 @@ body{
 .highlight i{
     font-size:45px;
 }
-
 .Forecast{
     display:grid;
     grid-template-columns: repeat(7,94px);
@@ -125,7 +124,9 @@ body{
     display:flex;
     gap:10px;
 }
-
+#MValue{
+    font-size: 1.2em;
+}
 
 /* Dialog styles */
 .loading-dialog {
