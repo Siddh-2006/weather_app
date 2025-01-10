@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="weather-input">
             <div class="input-group">
-            <input type="text"  id="userLocation" placeholder="Search any city">
+            {% csrf_token %}
+            <input autofocus=on type="text"  id="userLocation" placeholder="Search any city">
             <select id="converter" class="converter">
                 <option>°C</option>
                 <option>°F</option>
             </select>
-            <i class="fa fa-search"></i>
+            <i id="search_city_btn" class="fa fa-search"></i>
         </div>
         
         <div class="weatherIcon">
             <i class="fa-solid fa-cloud-sun"></i>
         </div>
         <div class="temperature">
-            28.6°C
+            {{temp}}
         </div>
         <div class="feelsLike">
             Sunny and Cloudy
