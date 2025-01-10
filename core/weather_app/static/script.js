@@ -68,7 +68,7 @@ function forecast(fr){
     const fr_node_date=document.querySelectorAll(".Forecast .fore_date .date_holder");
     for(let i=0;i<14;i++){
         let temp=fr.forecastday[i].day.avgtemp_c;
-        fr_node_list[i].textContent=`${temp}`;
+        fr_node_list[i].textContent=`${temp}°C`;
         fr_node_date[i].innerText=`${fr.forecastday[i].date}`;
     }
     

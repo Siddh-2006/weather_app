@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-EXTERNAL_APP=["weather_app"]
+EXTERNAL_APP=["weather_app","webpush"]
 INSTALLED_APPS+=EXTERNAL_APP
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -100,7 +100,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+WEBPUSH_SETTINGS = {
+   "VAPID_PUBLIC_KEY": "BFQ8D86M85dLjmOicVLHmfUnPzOHIN-H4Am-h-F1kMn1fFQx6UuPJ-_rLuldNGBDGAxMccmTnxuzXnrNQtH0Szo",
+   "VAPID_PRIVATE_KEY": "dXdUYcaKtqA8n589_PiLiUYySkUGr8gsF6_ZmG51Iss",
+   "VAPID_ADMIN_EMAIL": "admin@example.com"
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
