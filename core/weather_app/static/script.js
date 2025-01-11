@@ -53,6 +53,7 @@ function send_name(event){
         dataType: "json",
         success: function (response) {
             update_current(response);
+            add_local(response.location.name);
         },
         error: function(response) {
             console.log("error",response);
@@ -84,6 +85,11 @@ function showLoading() {
 /* function to hide loading */
 function hideLoading() {
     document.getElementById('loading-dialog').classList.remove('active');
+}
+
+/* function to add prefered location on local device */
+function add_local(loc){
+    localStorage.setItem('user_data69',`${loc}`);
 }
 
 /* event listeners */
