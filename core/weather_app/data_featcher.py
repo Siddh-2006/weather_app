@@ -9,7 +9,11 @@ def fetch_current(loc,**kwargs):
     url=base_url+"/forecast.json"
     payload.update({"q":loc,"days":15,"day_fields":"temp_c","hour_fields":"temp_c","hour":"12","aqi":"yes"})
     payload.update(**kwargs)
-    data=re.get(url,params=payload)
+    try:
+        data=re.get(url,params=payload)
+    except Exception as e:
+        print(e)
+    
     print(data.url)
     if data.status_code==200:
         return data.json()
