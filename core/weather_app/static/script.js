@@ -60,7 +60,7 @@ function send_name(event){
         }
     });
     
-    setTimeout(hideLoading,200);
+    setTimeout(hideLoading,400);
 };
 /* function to update seven day forecast */
 function forecast(fr){
