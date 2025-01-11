@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-qu)8g3zqem_veg-@wzi(gn)bsr^-bar3e3nfetz^c!t*_j4uxe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app','.now.sh']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-EXTERNAL_APP=["weather_app","webpush"]
+EXTERNAL_APP=["weather_app"]
 INSTALLED_APPS+=EXTERNAL_APP
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -69,17 +69,17 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.app'
 
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 
@@ -100,11 +100,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-WEBPUSH_SETTINGS = {
-   "VAPID_PUBLIC_KEY": "BFQ8D86M85dLjmOicVLHmfUnPzOHIN-H4Am-h-F1kMn1fFQx6UuPJ-_rLuldNGBDGAxMccmTnxuzXnrNQtH0Szo",
-   "VAPID_PRIVATE_KEY": "dXdUYcaKtqA8n589_PiLiUYySkUGr8gsF6_ZmG51Iss",
-   "VAPID_ADMIN_EMAIL": "admin@example.com"
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -123,11 +118,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIFILES_DIRS=[
-    os.path.join(BASE_DIR,"static"),
-]
-
-STATIC_ROOT=os.path.join(BASE_DIR,"staticfiles")
+STATICFILES_DIRS = [BASE_DIR/'weather_app'/'static',]
+STATIC_ROOT = BASE_DIR/'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
