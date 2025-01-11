@@ -17,7 +17,8 @@ def return_data_city(request):
                     return JsonResponse({"error":data["error"]},status=400)
                 else:
                     return JsonResponse(data,status=200)
-            else:JsonResponse({"error":"internal requests error"},status=500)
+            else:
+                return JsonResponse({"error":"internal requests error"},status=500)
         else:
             return JsonResponse({"error":"no city provided"},status=400)
     else :

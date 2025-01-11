@@ -21,3 +21,5 @@ def fetch_current(loc,**kwargs):
         if data.status_code==400:
             if data.json()["error"]["code"]==1006:
                 return {"error":"no city found"}
+        else:
+            return {"error":f"api_error status_code{data.status_code}"}
