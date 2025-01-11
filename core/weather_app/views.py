@@ -12,10 +12,12 @@ def return_data_city(request):
         location=request.POST["location"]
         if location:
             data=data_featcher.fetch_current(location)
-            if 'error' in data:
-                return JsonResponse({"error":data["error"]},status=400)
-            else:
-                return JsonResponse(data,status=200)
+            if data:
+                if 'error' in data:
+                    return JsonResponse({"error":data["error"]},status=400)
+                else:
+                    return JsonResponse(data,status=200)
+            else:JsonResponse({"error":"internal requests error"},status=500)
         else:
             return JsonResponse({"error":"no city provided"},status=400)
     else :

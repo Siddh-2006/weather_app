@@ -14,7 +14,7 @@ def fetch_current(loc,**kwargs):
     except Exception as e:
         print(e)
     
-    print(data.url)
+    print(data.url,data.status_code)
     if data.status_code==200:
         return data.json()
     else :
