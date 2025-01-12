@@ -2,7 +2,7 @@ import requests as re
 import os
 from dotenv import load_dotenv
 load_dotenv()
-api_key='1fdd6de639604ca3b34151033250801'
+api_key=""
 payload={"key":api_key}
 base_url="http://api.weatherapi.com/v1"
 def fetch_current(loc,**kwargs):
