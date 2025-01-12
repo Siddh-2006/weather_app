@@ -20,7 +20,7 @@ function displayMapInfo(lat, lng) {
       console.log('API Response:', data); // Log the complete API response
 
       if (data) {
-        console.log('ok'); // Log the timelines data
+        console.log(popupContent); // Log the timelines data
         if (true) {
           console.log('ok'); // Log the intervals data
 
