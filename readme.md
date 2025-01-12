@@ -36,14 +36,14 @@ This app is built with ❤️ and collaboration by an awesome team:
 
 
 👨‍💻 **Shah Siddh**  
-<a href="linkedin.com/in/siddh-shah-71491832a" >linkedin</a>
+<a href="https://linkedin.com/in/siddh-shah-71491832a" >![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)</a>
 
 👩‍💻 **Freny Chauhan**  
-<a href="linkedin.com/in/freny-chauhan-80932832a" >linkedin</a>
+<a href="https://linkedin.com/in/freny-chauhan-80932832a" >![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)</a>
 
 
 👨‍💻 **Bhaskar Sahu**  
-<a href="linkedin.com/in/bhaskar-sahu-4489a229b">linkedin</a>
+<a href="https://linkedin.com/in/bhaskar-sahu-4489a229b">![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat-square&logo=linkedin)</a>
 ---
 
 ## 📩 Feedback  
