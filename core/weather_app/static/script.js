@@ -54,6 +54,10 @@ function send_name(event){
         success: function (response) {
             update_current(response);
             add_local(response.location.name);
+            let longitude=response.location.lon;
+            let latitude=response.location.lat;
+            map.setView([latitude,longitude],10);
+            displayMapInfo(latitude,longitude);
         },
         error: function(response) {
             console.log("error",response);

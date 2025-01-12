@@ -17,7 +17,7 @@ function displayMapInfo(lat, lng) {
       return response.json();
     })
     .then(data => {
-      console.log('API Response:', data); // Log the complete API response
+      console.log("data fetched"); // Log the complete API response
 
       if (data) {
         console.log('ok'); // Log the timelines data
