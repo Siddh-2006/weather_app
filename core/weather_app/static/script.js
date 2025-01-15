@@ -128,7 +128,7 @@ converter.addEventListener("change",()=>{
     let current_value=converter.value;
     if(current_value=="far"){
         all_temp_holder.forEach(element => {
-            element.textContent=`${cel_to_far(parseFloat(element.textContent)).toFixed(1)} F`;
+            element.textContent=`${cel_to_far(parseFloat(element.textContent)).toFixed(1)}°F`;
         });
     }
     else{
