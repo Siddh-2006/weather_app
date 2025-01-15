@@ -1,5 +1,5 @@
 const apiKey = '1fdd6de639604ca3b34151033250801'; // Replace with your Tomorrow.io API key
-const map = L.map('map').setView([23.0225, 72.5714], 10); // Example coordinates: Ahmedabad
+const map = L.map('map').setView([23.0225, 72.5714], 5); // Example coordinates: Ahmedabad
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution: '© OpenStreetMap contributors'
@@ -20,7 +20,7 @@ function displayMapInfo(lat, lng) {
       console.log("data fetched"); // Log the complete API response
 
       if (data) {
-        console.log(popupContent); // Log the timelines data
+        console.log(true); // Log the timelines data
         if (true) {
           console.log('ok'); // Log the intervals data
 

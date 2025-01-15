@@ -38,8 +38,8 @@
                     {% csrf_token %}
                     <input autofocus="on" type="text" id="userLocation" placeholder="Search any city" />
                     <select id="converter" class="converter">
-                        <option>°C</option>
-                        <option>°F</option>
+                        <option value="cel">°C</option>
+                        <option value="far">°F</option>
                     </select>
                     <i id="search_city_btn" class="fa fa-search"></i>
                 </div>
@@ -47,7 +47,7 @@
                     <div class="weatherIcon">
                         <i class="fa-solid fa-cloud-sun"></i>
                     </div>
-                    <div class="temperature">{{temp}}</div>
+                    <div  class="temperature temp_val">{{temp}}</div>
                     <div class="feelsLike">Sunny and Cloudy</div>
                     <div class="description">Mostly Clear sky</div>
                     <hr />
@@ -133,37 +133,37 @@
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                 </div>
 
@@ -172,37 +172,37 @@
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                     <div class="fore_date">
                         <span class="date_holder"></span>
                         <i class="fa-solid fa-cloud-sun"></i>
-                        <h1 id="PValue"></h1>
+                        <h1 class="temp_val"></h1>
                     </div>
                 </div>
                 <h2>Your Location</h2>

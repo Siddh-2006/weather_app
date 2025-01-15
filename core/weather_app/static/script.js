@@ -16,6 +16,7 @@ const PValue=document.querySelector("#PValue");
 const Forecast =document.querySelector(".Forecast");
 const search_btn=document.querySelector("#search_city_btn");
 const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value
+const all_temp_holder=document.querySelectorAll(".temp_val");
 
 /* function to update current data to ui */
 function update_current(res){
@@ -56,7 +57,7 @@ function send_name(event){
             add_local(response.location.name);
             let longitude=response.location.lon;
             let latitude=response.location.lat;
-            map.setView([latitude,longitude],10);
+            map.setView([latitude,longitude],5);
             displayMapInfo(latitude,longitude);
         },
         error: function(response) {
@@ -95,8 +96,18 @@ function hideLoading() {
 function add_local(loc){
     localStorage.setItem('user_data69',`${loc}`);
 }
-
+/* function to convert celceus to farenheight */
+function cel_to_far(num,rev=false){
+    if(!rev){
+        return (num*(9/5))+32;
+    }
+    else{
+        return (num-32)*5/9;
+    }
+}
 /* event listeners */
+
+/* search box activation */
 $(userLocation).keyup(function (e) { 
     if(e.keyCode==13){
         $(search_btn).click();
@@ -109,5 +120,20 @@ search_btn.addEventListener('click',(e)=>{
     }
     else{
         console.log("no value");
+    }
+});
+
+/* degree to celcius */
+converter.addEventListener("change",()=>{
+    let current_value=converter.value;
+    if(current_value=="far"){
+        all_temp_holder.forEach(element => {
+            element.textContent=`${cel_to_far(parseFloat(element.textContent)).toFixed(1)} F`;
+        });
+    }
+    else{
+        all_temp_holder.forEach(element => {
+            element.textContent=`${cel_to_far(parseFloat(element.textContent),rev=true).toFixed(1)}°C`;
+        });
     }
 });
