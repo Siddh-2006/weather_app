@@ -59,6 +59,9 @@ function send_name(event){
             let latitude=response.location.lat;
             map.setView([latitude,longitude],5);
             displayMapInfo(latitude,longitude);
+            if(converter.value=="far"){
+                cel_to_far_every();
+            }
         },
         error: function(response) {
             console.log("error",response);
@@ -105,6 +108,22 @@ function cel_to_far(num,rev=false){
         return (num-32)*5/9;
     }
 }
+
+
+/* function to change cel to fahrenheight every where */
+function cel_to_far_every(){
+    let current_value=converter.value;
+    if(current_value=="far"){
+        all_temp_holder.forEach(element => {
+            element.textContent=`${cel_to_far(parseFloat(element.textContent)).toFixed(1)}°F`;
+        });
+    }
+    else{
+        all_temp_holder.forEach(element => {
+            element.textContent=`${cel_to_far(parseFloat(element.textContent),rev=true).toFixed(1)}°C`;
+        });
+    }
+}
 /* event listeners */
 
 /* search box activation */
@@ -124,16 +143,4 @@ search_btn.addEventListener('click',(e)=>{
 });
 
 /* degree to celcius */
-converter.addEventListener("change",()=>{
-    let current_value=converter.value;
-    if(current_value=="far"){
-        all_temp_holder.forEach(element => {
-            element.textContent=`${cel_to_far(parseFloat(element.textContent)).toFixed(1)}°F`;
-        });
-    }
-    else{
-        all_temp_holder.forEach(element => {
-            element.textContent=`${cel_to_far(parseFloat(element.textContent),rev=true).toFixed(1)}°C`;
-        });
-    }
-});
+converter.addEventListener("change",cel_to_far_every);

@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 api_key=os.getenv("api_key")
+print(api_key)
 payload={"key":api_key}
 base_url="http://api.weatherapi.com/v1"
 def fetch_current(loc,**kwargs):
